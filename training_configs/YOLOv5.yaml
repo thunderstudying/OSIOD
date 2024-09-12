@@ -1,0 +1,16 @@
+MODEL:
+  META_ARCHITECTURE: "YOLO"
+  WEIGHTS: ""
+DATASETS:  # img_num 2501 2510 5717 5823 add up to 16551
+  TRAIN: ('no_difficult_custom_voc_2007_train','no_difficult_custom_voc_2007_val','no_difficult_custom_voc_2012_train','no_difficult_custom_voc_2012_val',)
+  TEST: ('no_difficult_voc_2007_test', 'WR1_Mixed_Unknowns')
+DATALOADER:
+  ASPECT_RATIO_GROUPING: False
+SEED: 0
+SOLVER:
+  IMS_PER_BATCH: 200
+  CHECKPOINT_PERIOD: 69
+  MAX_ITER: 27600
+  BASE_LR: 0.01
+TEST:
+  EVAL_PERIOD: 69
